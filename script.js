@@ -70,8 +70,12 @@ function setSlide(index) {
         left: index * slideWidth,
         behavior: 'smooth'
     });
-    
-    // Menambahkan gaya aktif pada tombol yang sedang dipilih
+
+    updateActiveButton(index);
+}
+
+// Fungsi untuk memperbarui tombol aktif
+function updateActiveButton(index) {
     sliderBtns.forEach(btn => btn.classList.remove('active')); // Hilangkan gaya aktif dari semua tombol
     sliderBtns[index].classList.add('active'); // Tambahkan gaya aktif pada tombol yang dipilih
 }
@@ -84,7 +88,22 @@ sliderBtns.forEach((btn, index) => {
     });
 });
 
-setSlide(0);
+// Fungsi untuk menghitung slide terdekat berdasarkan posisi scroll
+function handleScroll() {
+    const slideWidth = slides[0].offsetWidth + 300;
+    const scrollPosition = slider.scrollLeft;
+    const currentIndex = Math.round(scrollPosition / slideWidth);
+
+    // Perbarui tombol aktif sesuai slide terdekat
+    updateActiveButton(currentIndex);
+}
+
+// Event listener untuk scroll
+slider.addEventListener('scroll', handleScroll);
+
+// Set kondisi awal: aktifkan tombol pertama
+setSlide(0); // Atur slider ke slide pertama saat halaman dimuat
+
 
 
 const koridorImages = document.querySelectorAll('.kor-image');
