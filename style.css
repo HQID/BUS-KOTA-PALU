@@ -322,23 +322,28 @@ b {
 }
 
 .spek-list-card p:nth-child(2):hover {
-    scale: 120%;
+    scale: 110%;
     transition: all .2s ease-in-out;
 }
 
 .card-koridor {
+    width: 220px;
     height: 45px;
     background-color: var(--primary);
-    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
     border-radius: 20px;
 }
 
 .card-koridor img {
-    width: 70%;
+    width: 15%;
 }
 
 .card-koridor:hover {
-    scale: 120%;
+    scale: 110%;
     transition: all .2s ease-in-out;
 }
 
@@ -922,6 +927,7 @@ footer {
         width: 100%;
         flex-direction: column;
         gap: 30px;
+        margin-bottom: 10px;
     }
 
     .spek-list-card {
@@ -941,10 +947,11 @@ footer {
 
     .card-koridor {
         width: 90%;
+        gap: 12px;
     }
 
     .card-koridor img {
-        width: 50%;
+        width: 13%;
     }
 
     .koridor {
@@ -1209,6 +1216,7 @@ footer {
         width: 100%;
         flex-direction: column;
         gap: 30px;
+        margin-bottom: 10px;
     }
 
     .spek-list-card {
@@ -1226,10 +1234,11 @@ footer {
 
     .card-koridor {
         width: 90%;
+        gap: 20px;
     }
 
     .card-koridor img {
-        width: 40%;
+        width: 10%;
     }
 
     .koridor {
