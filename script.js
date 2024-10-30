@@ -72,9 +72,6 @@ var baseMaps = {
 // Menambahkan salah satu peta sebagai default (misalnya, OpenStreetMap)
 baseMaps["Dark"].addTo(map);
 
-// Menambahkan kontrol layer untuk memilih peta
-L.control.layers(baseMaps).addTo(map);
-
 var halte = L.icon({
     iconUrl: 'assets/img/halte.png', // Ganti dengan URL ikon Anda
     iconSize: [40, 40], // Ukuran ikon [lebar, tinggi]
@@ -99,6 +96,20 @@ var placeholder = L.icon({
 var compass = new L.Control.Compass({
     position: 'bottomleft'   // Letak kompas di peta
 }).addTo(map);
+
+
+var busLayer = L.layerGroup();
+var halteLayer = L.layerGroup();
+
+L.control.layers(baseMaps, {
+    "Tampilkan Bus": busLayer,
+    "Tampilkan Halte": halteLayer
+}).addTo(map);
+
+// Menampilkan layer awal (bus dan halte)
+busLayer.addTo(map);
+halteLayer.addTo(map);
+
 
 
 var busLocations = [
@@ -133,6 +144,7 @@ var busLocations = [
 busLocations.forEach(function(bus) {
     var marker = L.marker(bus.coords, { icon: busJalan }).addTo(map);
     marker.bindPopup("<b>Posisi Bus</b><br>" + bus.name).openPopup();
+    busLayer.addLayer(marker);
 });
 
 var pantoloan = L.marker([-0.7083225129838916, 119.85717594472423], {icon: halte}).addTo(map);
@@ -208,6 +220,7 @@ var locations = [
 locations.forEach(function(location) {
     var marker = L.marker(location.coords, { icon: halte }).addTo(map);
     marker.bindPopup("<b>Halte Bus</b><br>" + location.name).openPopup();
+    halteLayer.addLayer(marker);
 });
 
 var koridor1 = L.Routing.control({
