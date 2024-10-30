@@ -805,7 +805,7 @@ footer {
     animation: fadeInSlide 0.5s ease-in-out;
 }
 
-@media (min-width: 320px) and (max-width: 1200px) {
+@media (min-width: 320px) and (max-width: 767px) {
     nav {
         display: none;
     }
@@ -889,6 +889,10 @@ footer {
         padding: 10px;
     }
 
+    .about {
+        padding: 0;
+    }
+
     .rutes>p {
         font-size: 1.1em;
     }
@@ -947,6 +951,7 @@ footer {
     .kor-satu , .kor-dua , .kor-tiga , .kor-empat, .kor-lima {
         width: 100%;
         padding: 10px;
+        justify-content: center;
     }
 
     .list-koridor {
@@ -1072,6 +1077,290 @@ footer {
 
     .nav-footer {
         flex-direction: row;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .botbar {
+        display: block
+    }
+
+    .ques-box {
+        bottom: 80px;
+        right: 10px;
+    }
+
+    .chatbox {
+        margin-bottom: 10px;
+        margin-right: 30px;
+    }
+
+    .message {
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    nav {
+        display: none;
+    }
+
+    .main {
+        margin: 0 20px;
+        margin-bottom: 40px;
+        max-height: 800px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .logo img:nth-child(2) {
+        width: 65px;
+        margin-top: 2px;
+    }
+
+    .desc {
+        margin: 30px 0;
+    }
+
+    .desc p {
+        font-size: 1.2em;
+        text-align: center;
+        padding: 5px 30px;
+    }
+
+    .desc button {
+        font-size: 1.2em;
+        padding: 30 60px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        width: 200px;
+    }
+
+    .info {
+        position: static;
+        margin: 20px auto;
+        width: 200px;
+    }
+
+    .image {
+        /* display: none; */
+        bottom: -40px;
+        height: 35%;
+    }
+    
+    .image img {
+        width: 110%;
+    }
+
+    .tentang {
+        margin: 0 20px;
+        font-size: .9em;
+        margin-bottom: 40px;
+        padding: 40px 20px;
+    }
+
+    .tentang h1 {
+    }
+
+    .tentang>p {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .slider, .rutes-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .rutes, .tampilan, .about, .spek {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .tampilan, .about, .spek {
+        font-size: 1.2em;
+    }
+
+    .spek {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .tampilan img {
+        width: 130%;
+    }
+
+    .spek-list {
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .spek-list-card {
+        width: 60%;
+    }
+
+    .spek-list-card p:nth-child(1) {
+        padding: 10px 20px;
+    }
+
+    .spek-list-card p:nth-child(2) {
+        width: 90%;
+        
+    }
+
+    .card-koridor {
+        width: 90%;
+    }
+
+    .card-koridor img {
+        width: 40%;
+    }
+
+    .koridor {
+        width: 100%;
+    }
+
+    .koridor img {
+        width: 100%;
+    }
+
+    .kor-satu , .kor-dua , .kor-tiga , .kor-empat, .kor-lima {
+        width: 90%;
+        padding: 10px;
+        font-size: 1.5em;
+        justify-content: center;
+    }
+
+    .list-koridor {
+        margin-top: 30px;
+        align-items: center;
+        font-size: 1em;
+        gap: 30px;
+    }
+
+    .rutes-container {
+        flex-direction: column;
+    }
+
+    .peta {
+        margin: 0 20px;
+        font-size: 1.1em;
+        margin-bottom: 40px;
+        padding: 40px 0 0 0;
+    }
+
+    .destinasi {
+        padding: 0 30px;
+        font-size: .8em;
+        margin-bottom: 30px;
+    }
+
+    .destinasi-list {
+        padding: 10px 20px;
+        gap: 30px;
+    }
+
+    .destinasi img {
+        width: 20px;
+    }
+
+    .drop-destinasi {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #drop-destinasi1 img:nth-child(1) {
+        width: 125px;
+        height: 200px;
+        margin-right: 0px;
+    }
+    
+    #drop-destinasi1 img:nth-child(2) {
+        width: 100px;
+        height: 200px;
+    }
+    
+    #drop-destinasi2 img:nth-child(1) {
+        margin-top: 0;
+        width: 250px;
+        height: 120px;
+    }
+    
+    #drop-destinasi2 img:nth-child(2) {
+        width: 150px;
+        height: 150px;
+    }
+    
+    #drop-destinasi3 img:nth-child(1) {
+        width: 200px;
+        height: 150px;
+        margin-top: 0;
+        margin-right: 0;
+    }
+    
+    #drop-destinasi3 img:nth-child(2) {
+        width: 125px;
+        height: 175px;
+    }
+    
+    #drop-destinasi4 img:nth-child(1) {
+        width: 175px;
+        height: 175px;
+        margin-top: 0;
+        margin-right: 0;
+    }
+    
+    #drop-destinasi4 img:nth-child(2) {
+        width: 125px;
+        height: 175px;
+    }
+    
+    #drop-destinasi5 img:nth-child(1) {
+        width: 175px;
+        height: 175px;
+        margin-right: 0;
+    }
+    
+    #drop-destinasi5 img:nth-child(2) {
+        width: 125px;
+        height: 175px;
+    }
+
+    .peta h1 {
+        font-size: 3em;
+    }
+
+    .peta h2 {
+        margin: 0 80px;
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    
+    footer {
+        padding: 20px 30px;
+        gap: 10px;
+        font-size: .9em;
+        padding-bottom: 0;
+    }
+
+    .bagian1 {
+        gap: 50px;
+        margin-bottom: 20px;
+    }
+
+    .alamat {
+        text-align: center;
     }
 
     hr {
