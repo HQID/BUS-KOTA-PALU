@@ -103,7 +103,11 @@ koridorElements.forEach((element) => {
     });
 });
 
-var map = L.map('map', {zoom: 14, minZoom:14, maxZoom: 16}).setView([-0.8984, 119.8504], 13); // Koordinat Palu, Sulawesi Tengah
+var map = L.map('map', {zoom: 14, minZoom:14, maxZoom: 16, maxBounds: [
+    [-0.940, 119.800], // Batas selatan barat
+    [-0.6745933946414844, 119.94882739405341]  // Batas utara timur
+],
+maxBoundsViscosity: 1.0}).setView([-0.8984, 119.8504], 13); // Koordinat Palu, Sulawesi Tengah
 
 var baseMaps = {
     "Terrain": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
