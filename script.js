@@ -58,6 +58,51 @@ message.addEventListener('click', function() {
     chatbox.classList.toggle('popup');
 })
 
+// Mengambil elemen-elemen yang diperlukan
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slider > div'); // Mengambil elemen anak di slider
+const sliderBtns = document.querySelectorAll('.slider-btn a');
+
+// Fungsi untuk mengatur tampilan slider berdasarkan indeks
+function setSlide(index) {
+    const slideWidth = slides[0].offsetWidth + 300; // Lebar slide termasuk gap
+    slider.scrollTo({
+        left: index * slideWidth,
+        behavior: 'smooth'
+    });
+    
+    // Menambahkan gaya aktif pada tombol yang sedang dipilih
+    sliderBtns.forEach(btn => btn.classList.remove('active')); // Hilangkan gaya aktif dari semua tombol
+    sliderBtns[index].classList.add('active'); // Tambahkan gaya aktif pada tombol yang dipilih
+}
+
+// Menambahkan event listener ke setiap tombol
+sliderBtns.forEach((btn, index) => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        setSlide(index);
+    });
+});
+
+setSlide(0);
+
+
+const koridorImages = document.querySelectorAll('.kor-image');
+const koridorElements = document.querySelectorAll('.list-koridor div');
+
+koridorElements.forEach((element) => {
+    element.addEventListener('mouseenter', () => {
+        const index = element.dataset.index;
+        koridorImages.forEach((img) => img.style.display = 'none');
+        koridorImages[index].style.display = 'block';
+    });
+
+    element.addEventListener('mouseleave', () => {
+        koridorImages.forEach((img) => img.style.display = 'none');
+        koridorImages[0].style.display = 'block';
+    });
+});
+
 var map = L.map('map', {zoom: 14, minZoom:14, maxZoom: 16}).setView([-0.8984, 119.8504], 13); // Koordinat Palu, Sulawesi Tengah
 
 var baseMaps = {
@@ -409,4 +454,6 @@ koridor4.on('routesfound', function(e) {
         routingContainer.remove();
     }
 })
+
+
 

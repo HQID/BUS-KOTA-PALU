@@ -188,6 +188,30 @@ nav ul li a:hover {
     scroll-snap-align: center;
 }
 
+.slider-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.slider-btn a {
+    background-color: gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 18px;
+    width: 18px;
+    height: 18px;
+    justify-content: center;
+
+}
+
+/* Gaya tombol slider aktif */
+.slider-btn a.active {
+    background-color: var(--primary); /* Sesuaikan warna dengan kebutuhan */
+    transform: scale(1.2);
+}
+
+
 .slider::-webkit-scrollbar {
     display: none;
 }
@@ -230,6 +254,7 @@ nav ul li a:hover {
     align-items: center;
     width: 100%;
     margin-right: 120px;
+    margin-left: 80px;
 }
 
 .tampilan>p {
@@ -254,7 +279,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-right: 35px;
+    margin-right: 40px;
     margin-bottom: 80px;
 }
 
@@ -355,6 +380,27 @@ b {
 
 .koridor img {
     width: 100%;
+    display: none;
+}
+
+.koridor img:nth-child(1) {
+    display: block;
+}
+
+.koridor img:nth-child(2) {
+    display: none;
+}
+
+.koridor img:nth-child(3) {
+    display: none;
+}
+
+.koridor img:nth-child(4) {
+    display: none;
+}
+
+.koridor img:nth-child(5) {
+    display: none;
 }
 
 .list-koridor {
@@ -367,7 +413,15 @@ b {
     gap: 40px;
 }
 
-.kor-satu {
+.koridor img {
+    display: none; /* Semua gambar disembunyikan secara default */
+}
+
+.koridor img:first-child {
+    display: block; /* Gambar default ditampilkan */
+}
+
+.kor-satu, .kor-dua, .kor-tiga, .kor-empat, .kor-lima {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -375,63 +429,15 @@ b {
     text-align: center;
     cursor: pointer;
     padding: 15px;
-    background-color: #f56124;
     border-radius: 20px;
     width: 450px;
 }
 
-
-.kor-dua {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 20px;
-    text-align: center;
-    cursor: pointer;
-    padding: 15px;
-    background-color: #ea9322;
-    border-radius: 20px;
-    width: 450px;
-}
-
-.kor-tiga {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 20px;
-    text-align: center;
-    cursor: pointer;
-    padding: 15px;
-    background-color: teal;
-    border-radius: 20px;
-    width: 450px;
-}
-
-.kor-empat {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 20px;
-    text-align: center;
-    cursor: pointer;
-    padding: 15px;
-    background-color: green;
-    border-radius: 20px;
-    width: 450px;
-}
-
-.kor-lima {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 20px;
-    text-align: center;
-    cursor: pointer;
-    padding: 15px;
-    background-color: skyblue;
-    border-radius: 20px;
-    width: 450px;
-}
+.kor-satu { background-color: #f56124; }
+.kor-dua { background-color: #ea9322; }
+.kor-tiga { background-color: teal; }
+.kor-empat { background-color: green; }
+.kor-lima { background-color: skyblue; }
 
 .peta {
     display: flex;
@@ -625,7 +631,6 @@ b {
     color: var(--background);
 }
 
-
 .message {
     background-color: var(--background);
     border-radius: 50%;
@@ -669,7 +674,6 @@ b {
 .message:hover {
     transform: scale(1.1);
 }
-
 
 .botbar {
     display: none;
@@ -889,6 +893,14 @@ footer {
         padding: 0;
     }
 
+    .slider {
+        justify-content: center;
+    }
+
+    .slider-btn {
+        display: none;
+    }
+
     .rutes, .tampilan, .about, .spek {
         width: 100%;
         margin: 0;
@@ -921,7 +933,7 @@ footer {
     }
 
     .tampilan img {
-        width: 130%;
+        width: 100%;
     }
 
     .spek-list {
