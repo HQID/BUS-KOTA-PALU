@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUS KOTA PALU</title>
+    <link rel="shortcut icon" href="assets/img/BUS-INFO.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-compass/dist/leaflet-compass.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- NAVBAR START -->
+    <nav>
+        <ul>
+            <li><a href="#main">HOME</a></li>
+            <li><a href="#tentang">TENTANG</a></li>
+            <li><a href="#destinasi">DESTINASI</a></li>
+            <li><a href="#kontak">KONTAK</a></li>
+        </ul>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- MAIN PAGE START -->
+    <section class="main" id="main">
+        <div class="logo">
+            <img src="assets/logo/Kota Palu.png" alt="Kota Palu">
+            <img src="assets/logo/Menhub.png" alt="Kementrian Perhubungan" height="100%">
+        </div>
+        <div class="desc">
+            <h1>BUS KOTA PALU</h1>
+            <p>Sistem Pemantauan & Informasi Bus Kota Palu</p>
+            <a href="#destinasi"><button>MULAI</button></a>
+        </div>
+        <div class="info">
+            <p>Gratis Hingga</p>
+            <p class="penting">DESEMBER <br>1/12/2024</p>
+        </div>
+        <div class="image">
+            <img src="assets/img/BUS.png" alt="Bus Kota Palu">
+        </div>
+    </section>
+    <!-- MAIN PAGE END -->
+
+    <!-- TENTANG PAGE START -->
+    <section class="tentang" id="tentang">
+        <h1>TENTANG</h1>
+        <p>Seputar dan Informasi Bus Kota</p>
+        <div class="slider">
+            <div class="rutes">
+                <p>RUTE INTEGRASI 4 KORIDOR</p>
+                <div class="rutes-container">
+                    <div class="koridor">
+                        <img src="assets/img/RUTE.gif" alt="">
+                    </div>
+                    <div class="list-koridor">
+                        <div class="kor-satu">
+                            <p>01</p>
+                            <p>Pantoloan - Pusat Kota</p>
+                        </div>
+                        <div class="kor-dua">
+                            <p>02</p>
+                            <p>Balai Kota - Pasar Manonda</p>
+                        </div>
+                        <div class="kor-tiga">
+                            <p>03M</p>
+                            <p>Pusat Kota - Bandara MSA</p>
+                        </div>
+                        <div class="kor-empat">
+                            <p>03Y</p>
+                            <p>Pusat Kota - Bandara MSA</p>
+                        </div>
+                        <div class="kor-lima">
+                            <p>04</p>
+                            <p>Bandara MSA - Terminal Tipo</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tampilan">
+                <p>Tampilan Bus Kota Palu</p>
+                <img src="assets/img/BUS-INFO.png" alt="">
+            </div>
+            <div class="about">
+                <p>Spesifikasi Bus Kota Palu</p>
+                <div class="spek">
+                    <p><b>Bus Trans Palu</b>, yang dioperasikan oleh <b>PT Bagong Transport</b> melalui  sistem <b>Buy The Service (BTS)</b>, memiliki <b>kapasitas 35</b> penumpang dengan <b>21 kursi duduk</b> dan body mobil berwarna putih dengan aksen livery corak daun kuning keemasan di samping. Bus ini dilengkapi layar videotron di bagian  belakang dan melayani <b>empat koridor</b> dengan <b>50 titik pemberhentian</b>. Pemerintah Kota Palu hanya menyiapkan halte dan bus stop, serta membayar per kilometer untuk setiap bus yang beroperasi. Selama masa  percobaan dari <b>Oktober hingga Desember 2024</b>, penumpang dapat menikmati layanan ini <b>tanpa biaya</b>.</p>
+                </div>
+                <div class="spek-list">
+                    <div class="spek-list-card">
+                        <p>KAPASITAS</p>
+                        <p>35 DENGAN 21 KURSI</p>
+                    </div>
+                    <div class="spek-list-card">
+                        <p>WARNA</p>
+                        <p>PUTIH & AKSEN EMAS</p>
+                    </div>
+                    <div class="spek-list-card">
+                        <p>KORIDOR</p>
+                        <div class="card-koridor">
+                            <img src="assets/img/koridor.png" alt="">
+                        </div>
+                    </div>
+                    <div class="spek-list-card">
+                        <p>BUS STOP</p>
+                        <p>50 TITIK BUS STOP</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- TENTANG PAGE END -->
+
+    <!-- PETA PAGE START -->
+    <section class="peta" id="destinasi">
+
+        <h1>DESTINASI</h1>
+        <div class="destinasi">
+            <div class="destinasi-list">
+                <p>01</p>
+                <p>Pantoloan - Pusat Kota</p>
+                <img src="assets/img/dropdown.png" alt="" id="dropdown1">
+                <div class="drop-destinasi" id="drop-destinasi1">
+                    <img src="assets/img/rute/rute1.png" alt="">
+                    <img src="assets/img/rute/grute1.png" alt="">
+                </div>
+            </div>
+            <div class="destinasi-list">
+                <p>02</p>
+                <p>Balai Kota - Pasar Manonda</p>
+                <img src="assets/img/dropdown.png" alt="" id="dropdown2">
+                <div class="drop-destinasi" id="drop-destinasi2">
+                    <img src="assets/img/rute/rute2.png" alt="">
+                    <img src="assets/img/rute/grute2.png" alt="">
+                </div>
+            </div>
+            <div class="destinasi-list">
+                <p>03M</p>
+                <p>Pusat Kota - Bandara MSA (via Wolter Monginsidi)</p>
+                <img src="assets/img/dropdown.png" alt="" id="dropdown3">
+                <div class="drop-destinasi" id="drop-destinasi3">
+                    <img src="assets/img/rute/grute3.png" alt="">
+                    <img src="assets/img/rute/rute3.png" alt="">
+                </div>
+            </div>
+            <div class="destinasi-list">
+                <p>03Y</p>
+                <p>Pusat Kota - Bandara MSA (via Moh. Yamin)</p>
+                <img src="assets/img/dropdown.png" alt="" id="dropdown4">
+                <div class="drop-destinasi" id="drop-destinasi4">
+                    <img src="assets/img/rute/grute4.png" alt="">
+                    <img src="assets/img/rute/rute4.png" alt="">
+                </div>
+            </div>
+            <div class="destinasi-list">
+                <p>04</p>
+                <p>Bandara MSA - Terminal Tipo</p>
+                <img src="assets/img/dropdown.png" alt="" id="dropdown5">
+                <div class="drop-destinasi" id="drop-destinasi5">
+                    <img src="assets/img/rute/rute5.png" alt="">
+                    <img src="assets/img/rute/grute5.png" alt="">
+                </div>
+            </div>
+        </div>
+        <h2>Lokasi Real-Time Bus dan Koridor Bus</h2>
+        <div class="container">
+            <div id="map"></div>
+        </div>
+    </section>
+    <!-- PETA PAGE END -->
+
+    <!-- FOOTER PAGE START -->
+     <footer id="kontak">
+        <div class="bagian1">
+            <div class="footer-logo">
+                <img src="assets/logo/Kota Palu.png" alt="">
+                <img src="assets/logo/Menhub.png" alt="">
+            </div>
+            <div class="alamat">
+                <p>Jl. Balai Kota Timur No.1,</p>
+                <p>Tanamodindi, Mantikulore,</p>
+                <p>Kota Palu - Sulawesi Tengah</p>
+                <p>94111</p>
+                <p>Telp (0451) 421666</p>
+            </div>
+            <div class="nav-footer">
+                <a href="#main">HOME</a>
+                <a href="#tentang">TENTANG</a>
+                <a href="#destinasi">DESTINASI</a>
+            </div>
+            <div class="sosmed">
+                <p>SOCIAL MEDIA</p>
+                <div class="sosmed-logo">
+                    <div class="sosmed-logo-round">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="sosmed-logo-round">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <div class="sosmed-logo-round">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div class="sosmed-logo-round">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="bagian2">
+            <p>&copy; 2024 TIM MAU TIDUR DULU - Universitas Tadulako. All rights reserved.</p>
+        </div>
+        
+     </footer>
+    <!-- FOOTER PAGE END -->
+
+     <!-- CHATBOX START -->
+      <div class="ques-box">
+        <div class="chatbox" id="chatbox">
+            <i class="fa-solid fa-headset"></i>
+            <p>Layanan Pelanggan</p>
+            <div class="percakapan">
+                <i class="fa-regular fa-paper-plane"></i>
+                <p>Percakapan Baru</p>
+            </div>
+        </div>
+        <div class="message" id="message">
+        <i class="fa-solid fa-comment"></i>
+        </div>
+      </div>
+     <!-- CHATBOX END -->
+
+    <!-- BOTBAR -->
+    <section class="botbar">
+        <ul>
+            <li><a href="#main"><i class="fa-solid fa-home"></i></a></li>
+            <li><a href="#tentang"><i class="fa-solid fa-info"></i></a></li>
+            <li><a href="#destinasi"><i class="fa-solid fa-map"></i></a></li>
+            <li><a href="#kontak"><i class="fa-solid fa-address-book"></i></a></li>
+        </ul>
+    </section>
+        <!-- BOTBAR -->
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-compass/dist/leaflet-compass.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
